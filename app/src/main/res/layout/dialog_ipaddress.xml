@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_info_outline_black_168dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/infomation_panel"
+        android:textSize="@dimen/panel_size"
+        android:textColor="@color/fontColor"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="908dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@mipmap/epd42_info_1" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="908dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9"
+        app:srcCompat="@mipmap/epd42_info_2" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="908dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/imageView10"
+        app:srcCompat="@mipmap/epd42_info_3" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="908dp"
+        android:layout_height="570dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:srcCompat="@mipmap/epd42_info_4" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="910dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:srcCompat="@mipmap/epd42_info_6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="908dp"
+        android:layout_height="570dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@mipmap/epd42_info_7" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="908dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@mipmap/epd42_info_8" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="908dp"
+        android:layout_height="570dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
+        app:layout_constraintStart_toStartOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:srcCompat="@mipmap/epd42_info_9" />
+
+    <RelativeLayout
+        android:layout_width="1400dp"
+        android:layout_height="800dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/corners_dialog"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/guideline">
+        <LinearLayout
+            android:id="@+id/ly_label_pin"
+            android:layout_width="9450dp"
+            android:layout_height="85dp"
+            android:background="@drawable/corner_label_bg">
+
+            <ImageView
+                android:id="@+id/s9_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_network_check_black_240dp"/>
+
+            <TextView
+                android:id="@+id/label_goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/dialog_network"
+                android:layout_toRightOf="@+id/s9_icon"
+                android:textSize="@dimen/label_text_size"
+                android:textColor="@color/fontColor"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/ly_dialog"
+            android:layout_width="9450dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ly_label_pin"
+            android:background="@drawable/corners_contents_dialog">
+
+            <TextView
+                android:id="@+id/tv_d_goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="150dp"
+                android:text="@string/dialog_input_ip"
+                android:textSize="@dimen/font_72dp"
+                android:textColor="@color/fontColor"/>
+
+            <EditText
+                android:id="@+id/et_dialog_ipaddress"
+                android:layout_height="150dp"
+                android:layout_width="900dp"
+                android:layout_below="@+id/tv_d_goals"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:background="@drawable/dialog_edittext_bg"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="30dp"/>
+
+            <Button
+                android:id="@+id/bt_dialog_send"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_dialog_ipaddress"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="50dp"
+                android:background="#FFFFFF"
+                android:text="@string/send"
+                android:textSize="@dimen/font_55dp" />
+
+            <Button
+                android:id="@+id/bt_dialog_cancel"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/bt_dialog_send"
+                android:layout_alignTop="@id/bt_dialog_send"
+                android:layout_marginLeft="30dp"
+                android:text="@string/cancel"
+                android:background="#FFFFFF"
+                android:textSize="@dimen/font_55dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

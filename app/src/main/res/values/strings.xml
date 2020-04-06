@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">EPD42Demo</string>
+    <string name="infomation_panel">Information Panel</string>
+    <string name="patient_info">Patient Information</string>
+    <string name="caregivers">Caregivers</string>
+    <string name="physicians">Physicians</string>
+    <string name="precaution">Precaution</string>
+    <string name="schedule">Schedule</string>
+    <string name="medication">Medication</string>
+    <string name="pain_level">Pain Level</string>
+    <string name="vital_sign">Vital Sign</string>
+    <string name="goals">Goals</string>
+
+    <string name="dialog_messages">Please type you messages : </string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="dialog_hint_messages">Please type you messages in this ....</string>
+    <string name="dialog_input_ip">Please Input WebServer IP Address : </string>
+    <string name="dialog_network">NetWork Config</string>
+
+    <string name="no_surgical">No Surgical</string>
+    <string name="surgical_tomorrow">Tomorrow</string>
+    <string name="surgical_today">Today</string>
+    <string name="please_do_assessment">Please Do Pain Assessment</string>
+    <string name="no_schedule">No Schedule</string>
+
+    <string name="zero">0/10</string>
+    <string name="one">1/10</string>
+    <string name="two">2/10</string>
+    <string name="three">3/10</string>
+    <string name="four">4/10</string>
+    <string name="five">5/10</string>
+    <string name="six">6/10</string>
+    <string name="seven">7/10</string>
+    <string name="eight">8/10</string>
+    <string name="nine">9/10</string>
+    <string name="ten">10/10</string>
+    <string name="zero_level">Zero Level</string>
+    <string name="one_levle">One Level</string>
+    <string name="two_levle">Two Level</string>
+    <string name="three_levle">Three Level</string>
+    <string name="four_levle">Four Level</string>
+    <string name="five_levle">Five Level</string>
+    <string name="six_levle">Six Level</string>
+    <string name="seven_levle">Seven Level</string>
+    <string name="eight_levle">Eight Level</string>
+    <string name="nine_levle">Nine Level</string>
+    <string name="ten_levle">Ten Level</string>
+
+    <string name="network_error">Connect WebApi Service Network Error</string>
+    <string name="bed_change">此床病患已變更</string>
+    <string name="bed_change_messages">This Bed Has Changed , Please Wait 15 secs !!</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="exit">逃生地圖</string>
+    <string name="theme">個人化顯示</string>
+    <string name="change">語言切換</string>
+    <string name="life_map">生活地圖</string>
+    <string name="guide">醫院導覽</string>
+    <string name="environment">環境指標</string>
+
+    <string name="assisted_living">生活輔助資訊</string>
+    
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+    <string name="sunday">星期日</string>
+
+</resources>

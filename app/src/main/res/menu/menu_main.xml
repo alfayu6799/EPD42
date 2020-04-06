@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_exit"
+        android:enabled="true"
+        android:icon="@mipmap/new_exit"
+        android:title="逃生地圖" />
+    <item
+        android:id="@+id/action_msg"
+        android:enabled="true"
+        android:icon="@mipmap/new_image"
+        android:title="個人化圖示"/>
+    <item
+        android:id="@+id/action_change"
+        android:enabled="true"
+        android:icon="@mipmap/new_change"
+        android:title="語言切換" />
+    <item
+        android:id="@+id/action_life"
+        android:enabled="true"
+        android:icon="@mipmap/new_map"
+        android:title="生活地圖" />
+    <item
+        android:id="@+id/action_guide"
+        android:enabled="true"
+        android:icon="@mipmap/new_guide"
+        android:title="醫院導覽" />
+    <item
+        android:id="@+id/action_green"
+        android:enabled="true"
+        android:icon="@mipmap/new_greenhouse"
+        android:title="環境指標" />
+</menu>

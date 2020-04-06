@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 空床 layout -->
+    <LinearLayout
+        android:id="@+id/ly_full_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/contentsColor"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_empty_bed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/empty_bed"/>
+        <TextView
+            android:id="@+id/tv_empty_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:text="This Bed is Empty !!"
+            android:textColor="@color/fontColor"
+            android:textSize="128dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_full_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/info_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:src="@drawable/ic_info_outline_black_168dp" />
+
+            <TextView
+                android:id="@+id/tv_label_info_panel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/infomation_panel"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/panel_size" />
+
+            <ImageView
+                android:id="@+id/iv_network_messages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:visibility="invisible"
+                android:src="@drawable/ic_report_problem_black_24dp" />
+        </LinearLayout>
+
+        <!-- 第一組 開始-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/view_9_width"
+                android:layout_height="@dimen/view_9_height" />
+
+            <RelativeLayout
+                android:id="@+id/ly_patientinfo"
+                android:layout_width="940dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/ly_label_patientinfo"
+                    android:layout_width="9450dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_label_bg">
+
+                    <ImageView
+                        android:id="@+id/s1_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/icon_patient_information_240"/>
+
+                    <TextView
+                        android:id="@+id/label_patient_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/s1_icon"
+                        android:text="@string/patient_info"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+
+                    <ImageView
+                        android:id="@+id/iv_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/label_patient_info"
+                        android:src="@mipmap/icon_male" />
+
+                    <TextView
+                        android:id="@+id/tv_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/iv_gender"
+                        android:text="33y"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ry_patient_context"
+                    android:layout_width="9450dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ly_label_patientinfo"
+                    android:background="@drawable/corner_contents_bg">
+
+                    <TextView
+                        android:id="@+id/tv_patient_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="96dp"
+                        android:text="Mr.Peter Meak Millas "
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/patient_name_size" />
+
+                    <ImageView
+                        android:id="@+id/bed_icon"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_below="@+id/tv_patient_name"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="50dp"
+                        android:src="@mipmap/icon_bed_240" />
+
+                    <TextView
+                        android:id="@+id/tv_bed_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bed_icon"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="10dp"
+                        android:text="253-1"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_55dp" />
+
+                    <ImageView
+                        android:id="@+id/phone_icon"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_below="@+id/tv_patient_name"
+                        android:layout_alignTop="@+id/bed_icon"
+                        android:layout_marginLeft="240dp"
+                        android:layout_toRightOf="@+id/bed_icon"
+                        android:src="@mipmap/icon_phone_240" />
+
+                    <TextView
+                        android:id="@+id/tv_phone_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/phone_icon"
+                        android:layout_marginLeft="450dp"
+                        android:layout_marginTop="10dp"
+                        android:text="615-333-1234"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_55dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/view_9_width"
+                android:layout_height="@dimen/view_9_height" />
+
+            <RelativeLayout
+                android:id="@+id/ly_caregivers"
+                android:layout_width="940dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_label_caregivers"
+                    android:layout_width="9450dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_label_bg">
+
+                    <ImageView
+                        android:id="@+id/s2_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/icon_caregivers_240" />
+
+                    <TextView
+                        android:id="@+id/label_caregivers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/s2_icon"
+                        android:text="Caregivers"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ry_caregiver_context"
+                    android:layout_width="9450dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ly_label_caregivers"
+                    android:background="@drawable/corner_contents_bg">
+
+                    <TextView
+                        android:id="@+id/label_nurse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="96dp"
+                        android:text="Nurse"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_72dp" />
+
+                    <TextView
+                        android:id="@+id/tv_nurse_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_nurse"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="90dp"
+                        android:text="Michelle \n  Taylor"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_55dp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/view_9_width"
+                android:layout_height="@dimen/view_9_height" />
+
+            <RelativeLayout
+                android:id="@+id/ly_physicians"
+                android:layout_width="940dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_label_physicians"
+                    android:layout_width="9450dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_label_bg">
+
+                    <ImageView
+                        android:id="@+id/s3_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/icon_physician_240" />
+
+                    <TextView
+                        android:id="@+id/label_physicians"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/s3_icon"
+                        android:text="Physicians"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ry_physician_context"
+                    android:layout_width="9450dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ly_label_physicians"
+                    android:background="@drawable/corner_contents_bg">
+
+                    <TextView
+                        android:id="@+id/label_surgeon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="96dp"
+                        android:text="Surgeon"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_72dp" />
+
+                    <TextView
+                        android:id="@+id/tv_surgeon_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_surgeon"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="90dp"
+                        android:text="Dr. Jessica \n  Stillman"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_55dp" />
+
+                    <View
+                        android:id="@+id/view_physicians"
+                        android:layout_width="@dimen/view_separation_width"
+                        android:layout_height="350dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/grayColor" />
+
+                    <TextView
+                        android:id="@+id/label_hospitalist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/label_surgeon"
+                        android:layout_marginLeft="180dp"
+                        android:layout_toRightOf="@+id/label_surgeon"
+                        android:text="Hospitalist"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_72dp" />
+
+                    <TextView
+                        android:id="@+id/tv_hospitalist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_hospitalist"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="90dp"
+                        android:layout_toRightOf="@id/view_physicians"
+                        android:text="Dr. Kyle \n Dennis"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_55dp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- 第一組 結束 -->
+
+        <View
+            android:layout_width="@dimen/view_9_width"
+            android:layout_height="@dimen/view_9_height" />
+
+        <!-- 第二組 開始 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="602dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/view_9_width"
+                android:layout_height="@dimen/view_9_height" />
+
+            <RelativeLayout
+                android:id="@+id/ly_precaution"
+                android:layout_width="940dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_label_precaution"
+                    android:layout_width="9450dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_label_bg">
+
+                    <ImageView
+                        android:id="@+id/s4_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/icon_messages_240" />
+
+                    <TextView
+                        android:id="@+id/label_precaution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/s4_icon"
+                        android:text="Precaution"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ry_precaution"
+                    android:layout_width="9450dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ly_label_precaution"
+                    android:background="@drawable/corner_contents_bg">
+
+                    <RelativeLayout
+                        android:id="@+id/ry_precaution_blank"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:id="@+id/ry_precaution_contents"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/ig_precaution_1"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="@dimen/precaution_top"
+                            android:src="@mipmap/icon_101" />
+
+                        <ImageView
+                            android:id="@+id/ig_precaution_2"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="@dimen/precaution_top"
+                            android:layout_toRightOf="@+id/ig_precaution_1"
+                            android:src="@mipmap/icon_301" />
+
+                        <ImageView
+                            android:id="@+id/ig_precaution_3"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_marginTop="@dimen/precaution_top"
+                            android:layout_toRightOf="@+id/ig_precaution_2"
+                            android:src="@mipmap/icon_401" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/view_9_width"
+                android:layout_height="@dimen/view_9_height" />
+
+            <RelativeLayout
+                android:id="@+id/ly_schedule"
+                android:layout_width="940dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_label_schedule"
+                    android:layout_width="9450dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_label_bg">
+
+                    <ImageView
+                        android:id="@+id/s5_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/icon_schedule_240" />
+
+                    <TextView
+                        android:id="@+id/label_schedule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/s5_icon"
+                        android:text="Schedule"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ry_schedule_context"
+                    android:layout_width="9450dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ly_label_schedule"
+                    android:background="@drawable/corner_contents_bg">
+
+                    <CheckBox
+                        android:id="@+id/cb_schedule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/tv_do_pina"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/checkbox_custom"
+                        android:button="@android:color/transparent"
+                        android:onClick="onCheckboxClicked"
+                        android:theme="@style/MyCheckBox"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_do_pina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="96dp"
+                        android:text="Please Do Pain Assessment"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_55dp" />
+
+                    <View
+                        android:id="@+id/view_schedule"
+                        android:layout_width="800dp"
+                        android:layout_height="@dimen/view_separation_width"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grayColor" />
+
+                    <TextView
+                        android:id="@+id/tv_surgical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_schedule"
+                        android:layout_alignLeft="@+id/tv_do_pina"
+                        android:layout_marginTop="90dp"
+                        android:text="Surgical"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_55dp" />
+
+                    <TextView
+                        android:id="@+id/tv_do_assessment_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="680dp"
+                        android:layout_marginTop="190dp"
+                        android:text="9:00 AM"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_38dp" />
+
+                    <TextView
+                        android:id="@+id/tv_surgical_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_schedule"
+                        android:layout_marginLeft="680dp"
+                        android:layout_marginTop="70dp"
+                        android:text="Tomorrow"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_38dp" />
+
+                    <TextView
+                        android:id="@+id/tv_surgical_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_schedule"
+                        android:layout_marginLeft="680dp"
+                        android:layout_marginTop="125dp"
+                        android:text="10:00 PM"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_38dp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/view_9_width"
+                android:layout_height="@dimen/view_9_height" />
+
+            <RelativeLayout
+                android:id="@+id/ly_medication"
+                android:layout_width="940dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_label_medication"
+                    android:layout_width="9450dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_label_bg">
+
+                    <ImageView
+                        android:id="@+id/s6_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/icon_medication_240" />
+
+                    <TextView
+                        android:id="@+id/label_medication"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/s6_icon"
+                        android:text="Medication"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ry_medicaton_context"
+                    android:layout_width="9450dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ly_label_medication"
+                    android:background="@drawable/corner_contents_bg">
+
+                    <TextView
+                        android:id="@+id/label_last_taken"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="80dp"
+                        android:text="Last Taken"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_72dp" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_medic_context_left"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_last_taken"
+                        android:layout_marginLeft="50dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_last_taken_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:text="09/12"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_38dp" />
+
+                        <TextView
+                            android:id="@+id/tv_last_taken_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:text="1:00 PM"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+
+                        <TextView
+                            android:id="@+id/tv_last_taken_drug_name"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="Oxycontin 10mg \n and 20mg tab"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_38dp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/label_next_taken"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/label_last_taken"
+                        android:layout_alignParentTop="@+id/label_last_taken"
+                        android:layout_marginLeft="100dp"
+                        android:layout_toRightOf="@+id/label_last_taken"
+                        android:text="Next Taken"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_72dp" />
+                    <View
+                        android:id="@+id/view_medication"
+                        android:layout_width="@dimen/view_separation_width"
+                        android:layout_height="400dp"
+                        android:layout_alignTop="@+id/label_next_taken"
+                        android:layout_centerInParent="true"
+                        android:background="@color/grayColor" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_medic_context_right"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_next_taken"
+                        android:layout_marginLeft="520dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_next_taken_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:text="Tomorrow"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_38dp" />
+
+                        <TextView
+                            android:id="@+id/tv_next_taken_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:text="3:00 PM"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+
+                        <TextView
+                            android:id="@+id/tv_next_taken_drug_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="NSAIDs"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_38dp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- 第二組 結束 -->
+
+        <View
+            android:layout_width="@dimen/view_9_width"
+            android:layout_height="@dimen/view_9_height" />
+
+        <!-- 第三組開始 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/view_9_width"
+                android:layout_height="@dimen/view_9_height" />
+
+            <RelativeLayout
+                android:id="@+id/ly_painlevel"
+                android:layout_width="940dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_label_pain_level"
+                    android:layout_width="9450dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_label_bg">
+
+                    <ImageView
+                        android:id="@+id/s7_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/icon_pain_level_240" />
+
+                    <TextView
+                        android:id="@+id/label_pain_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/s7_icon"
+                        android:text="@string/pain_level"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_pain_level_date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_toRightOf="@+id/label_pain_level"
+                        android:text="09/12/18 10:20"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ry_pain_level_context"
+                    android:layout_width="9450dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ly_label_pain_level"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/corner_contents_bg">
+
+                    <LinearLayout
+                        android:id="@+id/ly_pain_level_left"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="50dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/pv_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:src="@mipmap/icon_pv07" />
+
+                        <TextView
+                            android:id="@+id/tv_pain_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:text="Seven Level"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+
+                        <TextView
+                            android:id="@+id/tv_pain_level_ratio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:text="7/10"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/view_pain_level"
+                        android:layout_width="@dimen/view_separation_width"
+                        android:layout_height="400dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="120dp"
+                        android:background="@color/grayColor" />
+                    <RelativeLayout
+                        android:id="@+id/ry_pain_position"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="56dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_toRightOf="@+id/view_pain_level">
+                        <ImageView
+                            android:id="@+id/iv_pain_position"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/pain_position" />
+
+                        <ImageView
+                            android:id="@+id/F1"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_marginLeft="110dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B1"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_marginLeft="266dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F2"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F1"
+                            android:layout_marginLeft="110dp"
+                            android:layout_marginTop="24dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B2"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/B1"
+                            android:layout_marginLeft="266dp"
+                            android:layout_marginTop="24dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F3"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F2"
+                            android:layout_marginLeft="84dp"
+                            android:layout_marginTop="13dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F4"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/F3"
+                            android:layout_marginLeft="44dp"
+                            android:layout_toRightOf="@+id/F3"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B3"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/B2"
+                            android:layout_marginLeft="240dp"
+                            android:layout_marginTop="12dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B4"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B3"
+                            android:layout_marginLeft="44dp"
+                            android:layout_toRightOf="@+id/B3"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F5"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F2"
+                            android:layout_marginLeft="110dp"
+                            android:layout_marginTop="23dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F11"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F5"
+                            android:layout_marginLeft="110dp"
+                            android:layout_marginTop="24dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F15"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F11"
+                            android:layout_marginLeft="110dp"
+                            android:layout_marginTop="40dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F6"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F3"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="12dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F9"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F3"
+                            android:layout_alignTop="@+id/F6"
+                            android:layout_marginLeft="9dp"
+                            android:layout_toRightOf="@+id/F6"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F8"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F5"
+                            android:layout_alignTop="@+id/F9"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/F9"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F7"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/F8"
+                            android:layout_marginLeft="9dp"
+                            android:layout_toRightOf="@+id/F8"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F26"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F15"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginTop="7dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F27"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/F26"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/F26"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F10"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F6"
+                            android:layout_marginLeft="75dp"
+                            android:layout_marginTop="19dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F12"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/F10"
+                            android:layout_marginLeft="28dp"
+                            android:layout_toRightOf="@+id/F11"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F13"
+                            android:layout_width="@dimen/body_height"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F10"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F14"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/F13"
+                            android:layout_marginLeft="72dp"
+                            android:layout_toRightOf="@+id/F13"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F16"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F13"
+                            android:layout_marginLeft="65dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F17"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F14"
+                            android:layout_alignTop="@id/F16"
+                            android:layout_marginLeft="22dp"
+                            android:layout_toRightOf="@+id/F27"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F18"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F26"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F19"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/F18"
+                            android:layout_marginLeft="19dp"
+                            android:layout_toRightOf="@+id/F18"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F20"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F18"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginTop="24dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F21"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/F20"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/F20"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F22"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F20"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginTop="24dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F23"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@id/F22"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/F22"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F24"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/F22"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginTop="40dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/F25"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/F24"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/F24"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B5"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/B3"
+                            android:layout_marginLeft="235dp"
+                            android:layout_marginTop="13dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B6"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B5"
+                            android:layout_marginLeft="14dp"
+                            android:layout_toRightOf="@+id/B5"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B7"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B6"
+                            android:layout_marginLeft="9dp"
+                            android:layout_toRightOf="@+id/B6"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B8"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B7"
+                            android:layout_marginLeft="13dp"
+                            android:layout_toRightOf="@+id/B7"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B9"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/B5"
+                            android:layout_marginLeft="225dp"
+                            android:layout_marginTop="35dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B10"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B9"
+                            android:layout_marginLeft="23dp"
+                            android:layout_toRightOf="@+id/B9"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B11"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B10"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/B10"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B12"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B11"
+                            android:layout_marginLeft="21dp"
+                            android:layout_toRightOf="@+id/B11"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B13"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/B9"
+                            android:layout_marginLeft="223dp"
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B14"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B13"
+                            android:layout_marginLeft="22dp"
+                            android:layout_toRightOf="@+id/B13"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B15"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B14"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/B14"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B16"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B15"
+                            android:layout_marginLeft="22dp"
+                            android:layout_toRightOf="@+id/B15"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B17"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/B14"
+                            android:layout_marginLeft="253dp"
+                            android:layout_marginTop="29dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B18"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B17"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/B17"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B19"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/B17"
+                            android:layout_marginLeft="252dp"
+                            android:layout_marginTop="56dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B20"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B19"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/B19"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B21"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_below="@+id/B19"
+                            android:layout_marginLeft="252dp"
+                            android:layout_marginTop="34dp"
+                            android:src="@drawable/ic_circle_black_2dp" />
+
+                        <ImageView
+                            android:id="@+id/B22"
+                            android:layout_width="@dimen/body_width"
+                            android:layout_height="@dimen/body_height"
+                            android:layout_alignTop="@+id/B21"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/B21"
+                            android:src="@drawable/ic_circle_black_2dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ly_lable_pain_position"
+                    android:layout_width="9450dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ly_label_pain_level"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/corner_contents_bg"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_pain_big_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/pain_position_x2" />
+
+                    <ImageView
+                        android:id="@+id/iv_close_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_pain_big_position"
+                        android:src="@drawable/ic_cancel_black_24dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/view_9_width"
+                android:layout_height="@dimen/view_9_height" />
+
+            <RelativeLayout
+                android:id="@+id/ly_vital_sign"
+                android:layout_width="940dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_label_vital_sign"
+                    android:layout_width="9450dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_label_bg">
+
+                    <ImageView
+                        android:id="@+id/s8_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/icon_visi_mobile_240" />
+
+                    <TextView
+                        android:id="@+id/label_vital_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/s8_icon"
+                        android:text="@string/vital_sign"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_vital_sign_date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_toRightOf="@+id/label_vital_sign"
+                        android:text="09/12/18 12:38"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ry_vital_sign_context"
+                    android:layout_width="9450dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ly_label_vital_sign"
+                    android:background="@drawable/corner_contents_bg">
+
+                    <LinearLayout
+                        android:id="@+id/ly_heart_rate"
+                        android:layout_width="350dp"
+                        android:layout_height="95dp"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="100dp"
+                        android:background="@drawable/tv_custom_shape"
+                        android:drawableLeft="@drawable/ic_favorite_black_24dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:drawableLeft="@drawable/ic_favorite_black_24dp"
+                            android:text="HR"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+
+                        <TextView
+                            android:id="@+id/tv_heart_rate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="30dp"
+                            android:gravity="right"
+                            android:text="065"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ly_resp"
+                        android:layout_width="350dp"
+                        android:layout_height="95dp"
+                        android:layout_below="@+id/ly_heart_rate"
+                        android:layout_alignLeft="@+id/ly_heart_rate"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/tv_custom_shape"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:text="RESP"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+
+                        <TextView
+                            android:id="@+id/tv_resp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="30dp"
+                            android:gravity="right"
+                            android:text="014"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="95dp"
+                        android:layout_below="@+id/ly_resp"
+                        android:layout_alignLeft="@+id/ly_heart_rate"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/tv_custom_shape"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:text="SpO2%"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+
+                        <TextView
+                            android:id="@+id/tv_spo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="30dp"
+                            android:gravity="right"
+                            android:text="97"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ly_skin"
+                        android:layout_width="350dp"
+                        android:layout_height="95dp"
+                        android:layout_alignTop="@+id/ly_heart_rate"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/ly_heart_rate"
+                        android:background="@drawable/tv_custom_shape"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_skinf"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="3dp"
+                            android:text="SKINF"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+
+                        <TextView
+                            android:id="@+id/tv_skin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginRight="5dp"
+                            android:gravity="right"
+                            android:text="98.9"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+
+                    </LinearLayout>
+
+                    <!-- cNIBP & mmHg Layout -->
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/ly_skin"
+                        android:layout_alignTop="@+id/ly_resp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/ly_resp"
+                        android:background="@drawable/tv_custom_shape"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="180dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:text="cNIBP"
+                                android:textColor="@color/fontColor"
+                                android:textSize="@dimen/font_55dp" />
+
+                            <TextView
+                                android:id="@+id/tv_nibp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:gravity="right"
+                                android:text="120"
+                                android:textColor="@color/fontColor"
+                                android:textSize="@dimen/font_55dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="180dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:text="mmHg"
+                                android:textColor="@color/fontColor"
+                                android:textSize="@dimen/font_55dp" />
+
+                            <TextView
+                                android:id="@+id/tv_mmhg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:gravity="right"
+                                android:text="120"
+                                android:textColor="@color/fontColor"
+                                android:textSize="@dimen/font_55dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/view_9_width"
+                android:layout_height="@dimen/view_9_height" />
+
+            <RelativeLayout
+                android:id="@+id/ly_goals"
+                android:layout_width="940dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_label_pin"
+                    android:layout_width="9450dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_label_bg">
+
+                    <ImageView
+                        android:id="@+id/s9_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/icon_goals_240" />
+
+                    <TextView
+                        android:id="@+id/label_goals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/s9_icon"
+                        android:text="@string/goals"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/label_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ry_goals_context"
+                    android:layout_width="9450dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ly_label_pin"
+                    android:background="@drawable/corner_contents_bg">
+
+                    <TextView
+                        android:id="@+id/tv_goals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="150dp"
+                        android:text="Get Up and Walk"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_72dp" />
+
+                    <CheckBox
+                        android:id="@+id/cb_goals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/tv_goals"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_toRightOf="@+id/tv_goals"
+                        android:background="@drawable/checkbox_custom"
+                        android:button="@android:color/transparent"
+                        android:onClick="onCheckboxClicked"
+                        android:theme="@style/MyCheckBox"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_check_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/tv_goals"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_toRightOf="@+id/tv_goals"
+                        android:text="Undone"
+                        android:textColor="@color/fontColor"
+                        android:textSize="22dp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
